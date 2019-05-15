@@ -7,5 +7,5 @@ docker push "$1":latest
 
 while read -r remote_ip
 do
-    ssh -o StrictHostKeyChecking=no -i onica.pem ec2-user@"$remote_ip"  'bash -s' < deployer.sh "$1"
+    ssh -o StrictHostKeyChecking=no -i onica.pem ec2-user@"$remote_ip"  'bash -s' < helper.sh "$1"
 done < hosts
