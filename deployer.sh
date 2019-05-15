@@ -1,5 +1,5 @@
 #!/bin/bash
-$(aws ecr get-login --no-include-email --region us-west-2)
+$(aws ecr get-login --no-include-email --region us-east-1)
 docker build -t onica-app /home/ec2-user/hello-world/
 docker tag onica-app:latest "$1":latest
 docker push "$1":latest

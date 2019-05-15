@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Remember to change the ecr url"
-$(aws ecr get-login --no-include-email --region us-west-2)
+$(aws ecr get-login --no-include-email --region us-east-1)
 docker pull "$1":latest
 docker tag "$1":latest onica-app:latest
 docker stop $(docker ps -qa)
